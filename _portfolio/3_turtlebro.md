@@ -79,14 +79,13 @@ This allowed the TurtleBro embedded architecture to be reused in larger six-whee
 
 ## Production
 
-I hand-assembled the prototype electronics and the first few dozen commercial controller boards. As production volumes increased, PCB assembly moved to contract manufacturers, with typical incoming batches of roughly 60–150 boards.
+I hand-assembled the prototype electronics and the first few dozen commercial controller boards. As production volumes increased, PCB assembly moved to contract manufacturers.
 
-I prepared BOM and pick-and-place data, supported manufacturing questions and component substitutions, and handled the engineering side of incoming electronics.
+I prepared BOM and pick-and-place data, supported manufacturing questions and component substitutions.
 
-The supplier performed basic power-up and test-firmware checks. After delivery I configured the USB-to-UART interfaces, flashed and tested the boards, performed rework where necessary, and prepared the electronics for final robot assembly and system-level testing.
+The supplier performed basic power-up and test-firmware checks. After delivery I configured the USB-to-UART interfaces, flashed and tested the boards, performed rework if necessary, and prepared the electronics for final robot assembly and system-level testing.
 
-Over the product lifetime, manufacturing support became an ongoing part of the engineering work rather than a one-time handoff: controller revisions had to account for component availability, assembly issues, and lessons learned from previous production batches.
-
+Over the product lifetime, manufacturing support became an ongoing part of the engineering work rather than a one-time handoff: controller revisions had to account for component availability and assembly/testing issues.
 
 ## Technical highlights
 
