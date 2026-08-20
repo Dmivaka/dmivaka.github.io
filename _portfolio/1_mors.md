@@ -1,10 +1,10 @@
 ---
 title: "MORS"
-excerpt: "Low-volume production compact quadruped robot for education and robotics research<br/><img src='/images/mors/mors_preview.jpg'>"
+excerpt: "Compact quadruped robot for robotics research and low-volume production<br/><img src='/images/mors/mors_preview.jpg'>"
 collection: portfolio
 ---
 
-MORS is a lightweight 12-DoF quadruped robot developed as a compact, reliable platform for robotics research and low-volume production.
+MORS is a lightweight 12-DoF quadruped developed as a compact, reliable robotics research platform and produced in a ten-unit low-volume batch.
 
 The project followed the earlier Boxer quadruped. Boxer proved the basic actuator and control architecture, but remained a heavy research prototype. MORS was intended to be a much more repeatable machine: compact enough to transport easily, mechanically designed as a complete product, and reliable enough to serve as a stable platform for advanced locomotion research.
 
@@ -14,6 +14,8 @@ A [paper](https://www.researchgate.net/publication/389319462_MORS_BLDC-Based_Sma
 The robot also has its own [Instagram](https://www.instagram.com/mors_quadruped/).
 
 {% include youtube.html id="X0VH79P7XvY" %}
+
+### 12 DoF · 7.4 kg · 5.5 kg tested payload · 1.2 m/s · 6S Li-ion · 10 robots produced
 
 
 ## From Boxer to MORS
@@ -83,7 +85,7 @@ The communication architecture grew out of a practical problem: the PCIe CAN-FD 
 
 An Ethernet prototype on STM32F4 showed sub-millisecond response, leading to a dedicated bridge based on STM32H723 and STM32G474.
 
-The final board provided six independent CAN-FD buses; MORS used five. Four buses served the four legs and preserved a linear topology on each leg, while the fifth connected the PowerBoard.
+The final board provided six independent CAN-FD buses; MORS used five. Four buses served the four legs as independent linear CAN-FD segments, while the fifth connected the PowerBoard.
 
 The bridge exposed two communication paths:
 
@@ -108,11 +110,7 @@ The PowerBoard was intended for the wider VBCores ecosystem, but several practic
 
 ## IMU
 
-Earlier robot generations used the Bosch BNO055. During MORS development I evaluated replacements and selected the BHI360 for its higher update rate and supported Bosch SDK.
-
-I ported Bosch's BHY2 software to STM32 and developed a BHI360 + BMM350 module together with a VBCore-based USB adapter running TinyUSB.
-
-The BMM350 magnetometer proved unreliable inside MORS because of interference from the twelve electric motors, so the robot primarily used accelerometer/gyroscope data and the BHI360 game-rotation-vector output rather than magnetic heading.
+I replaced the BNO055 used in earlier robots with a BHI360-based module, porting Bosch's BHY2 SDK to STM32 and developing a TinyUSB interface for the onboard computer. A BMM350 magnetometer was evaluated but proved unreliable near the robot's twelve motors, so MORS operated primarily on accelerometer/gyroscope data and game-rotation-vector output.
 
 
 ## From one robot to ten
@@ -137,9 +135,6 @@ Final integration was still largely manual. For the ten-robot batch I assembled 
 
 ![Pre-production MORS](/images/mors/mors_second_assembly.jpg)
 *Work on the pre-production robot.*
-
-![Motor characterization](/images/mors/mors_kv_meas.jpg)
-*Measuring motor KV during actuator development.*
 
 ![Production electronics](/images/mors/mors_body_electronics.jpg)
 *Body electronics during production assembly.*
