@@ -148,8 +148,8 @@ These lessons became starting requirements for the next quadruped generation, [M
 - three-phase inline current sensing with INA240 amplifiers
 - A1339 motor-position sensing
 - four independent CAN-FD buses at 1 / 8 Mbit/s
-- Intel NUC onboard computer
-- Peak-System M.2 PCIe CAN-FD interface
+- X86 onboard computer
+- M.2 PCIe CAN-FD interface
 - 6S2P Li-ion battery
 - 0.39 m/s measured maximum speed
 
