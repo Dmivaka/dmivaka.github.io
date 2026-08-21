@@ -4,7 +4,7 @@ excerpt: "Reusable embedded hardware platform for low-volume robotics developmen
 collection: portfolio
 ---
 
-VBCores is a modular embedded hardware platform I developed to avoid redesigning the same difficult parts of robot electronics for every new device.
+[VBCores](https://vbcores.com/) is a modular embedded hardware platform I developed to avoid redesigning the same difficult parts of robot electronics for every new device.
 
 The central idea was to move the MCU, power conversion, CAN-FD interface, and debugging circuitry onto a compact factory-made System-on-Module. Application-specific boards could then remain comparatively simple, inexpensive, repairable, and easy to assemble in low volumes.
 
