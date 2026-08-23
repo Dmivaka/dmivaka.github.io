@@ -35,14 +35,14 @@ I was responsible for nearly the complete embedded electronics stack of MORS.
 
 My work included:
 
-- second-generation BLDC actuator-controller electronics;
-- STM32G4 FOC firmware evolved from the Boxer actuator stack;
-- absolute joint-position sensing;
-- PowerBoard power-management and safety hardware;
-- Ethernet–FDCAN communication between the onboard Linux computer and actuator networks;
-- BHI360-based IMU hardware and USB interface;
-- UAVCAN and LCM communication infrastructure;
-- flashing, calibration, wiring, electronics integration, and system bring-up for the production batch.
+- second-generation BLDC actuator-controller electronics
+- STM32G4 FOC firmware evolved from the Boxer actuator stack
+- absolute joint-position sensing
+- PowerBoard power-management and safety hardware
+- Ethernet–FDCAN communication between the onboard Linux computer and actuator networks
+- BHI360-based IMU hardware and USB interface
+- UAVCAN and LCM communication infrastructure
+- flashing, calibration, wiring, electronics integration, and system bring-up for the production batch
 
 
 ## Electronics architecture
@@ -66,11 +66,11 @@ Each actuator used a 4310 BLDC motor with a 10:1 planetary reduction and a VBCor
 
 The actuator firmware evolved from the Boxer control stack and added:
 
-- tuned current-loop parameters for the new motors;
-- UAVCAN communication instead of the custom Boxer CAN-FD protocol;
-- support for motor-side and external joint encoders;
-- a common encoder-calibration procedure;
-- EEPROM storage for individual motor calibration data and configuration.
+- tuned current-loop parameters for the new motors
+- UAVCAN communication instead of the custom Boxer CAN-FD protocol
+- support for motor-side and external joint encoders
+- a common encoder-calibration procedure
+- EEPROM storage for individual motor calibration data and configuration
 
 The controller operated from the 6S battery system with three-phase Hall-effect current sensing. PWM generation and the FOC current loop ran synchronously at 40 kHz.
 
@@ -153,9 +153,9 @@ The custom inductive hip encoder exposed another integration problem. Motor oper
 
 The workaround was sufficient for the production batch, but the larger lesson was architectural:
 
-1. actuators should be self-contained and identical wherever possible;
-2. actuator calibration should be completed before installation into the robot;
-3. long, fine-pitch encoder harnesses should be eliminated.
+1. actuators should be self-contained and identical wherever possible
+2. actuator calibration should be completed before installation into the robot
+3. long, fine-pitch encoder harnesses should be eliminated
 
 
 ## Next-generation integrated actuator
@@ -164,12 +164,12 @@ Based on these lessons, I designed a third-generation actuator controller intend
 
 The new design moved the electronics into the actuator itself and combined:
 
-- an STSPIN32G4 motor-control MCU/gate-driver;
-- integrated MOSFET power stage;
-- motor-side encoder interface;
-- NCV77320-based inductive output-shaft sensing;
-- flex-PCB encoder coils;
-- daisy-chain power and CAN-FD connections.
+- an STSPIN32G4 motor-control MCU/gate-driver
+- integrated MOSFET power stage
+- motor-side encoder interface
+- NCV77320-based inductive output-shaft sensing
+- flex-PCB encoder coils
+- daisy-chain power and CAN-FD connections
 
 Only power and CAN-FD needed to leave the actuator, eliminating the long motor and encoder harnesses used in the production MORS.
 

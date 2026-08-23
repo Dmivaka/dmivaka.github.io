@@ -30,14 +30,14 @@ I was responsible for Boxer's embedded electronics and firmware from 2019 to 202
 
 My work included:
 
-- BLDC actuator-controller schematic and PCB design;
-- porting and evolving the FOC firmware from the published Mini Cheetah implementation;
-- motor-position sensing and calibration;
-- robot-level power-management electronics;
-- four-bus CAN-FD communication;
-- Linux configuration and the initial CAN-to-LCM interface;
-- hardware bring-up, actuator calibration, and electronics maintenance;
-- an early open-loop walking demonstration for end-to-end system validation.
+- BLDC actuator-controller schematic and PCB design
+- porting and evolving the FOC firmware from the published Mini Cheetah implementation
+- motor-position sensing and calibration
+- robot-level power-management electronics
+- four-bus CAN-FD communication
+- Linux configuration and the initial CAN-to-LCM interface
+- hardware bring-up, actuator calibration, and electronics maintenance
+- an early open-loop walking demonstration for end-to-end system validation
 
 Mechanical design and later locomotion-control development were outside my responsibility.
 
@@ -62,9 +62,9 @@ Ben Katz's reference firmware was built around Mbed OS. I reimplemented the actu
 
 Later revisions added:
 
-- STM32G4 CORDIC-based trigonometric calculations;
-- FDCAN communication;
-- ADC oversampling, which noticeably reduced actuator acoustic noise;
+- STM32G4 CORDIC-based trigonometric calculations
+- FDCAN communication
+- ADC oversampling, which noticeably reduced actuator acoustic noise
 
 The current loop was limited to 30 A peak phase current, a limit the actuators regularly reached during walking.
 
@@ -128,9 +128,9 @@ Boxer proved that a custom underactuated quadruped could be built and controlled
 
 The main lessons were:
 
-- absolute joint position should be available at startup;
-- wiring and serviceability need to be designed together with the mechanics;
-- the complete robot architecture should be designed for repeatable operation, not merely for a successful prototype.
+- absolute joint position should be available at startup
+- wiring and serviceability need to be designed together with the mechanics
+- the complete robot architecture should be designed for repeatable operation, not merely for a successful prototype
 
 These lessons became starting requirements for the next quadruped generation, [MORS](/portfolio/1_mors/).
 

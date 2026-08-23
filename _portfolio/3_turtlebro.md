@@ -23,14 +23,14 @@ I was responsible for TurtleBro's embedded electronics and firmware from the fir
 
 My work included:
 
-- defining the embedded system architecture and designing more than 10 revisions of the main controller electronics;
-- developing and maintaining the STM32F4 firmware using STM32Cube HAL/LL and FreeRTOS;
-- implementing closed-loop motor control, wheel odometry, IMU and battery interfaces, status indication, and low-level system functions;
-- integrating the STM32 controller with ROS using rosserial and later micro-ROS;
-- integrating a separate Arduino-compatible student-programmable subsystem;
-- designing the six-motor expansion controller used in larger mobile platforms;
-- bringing up and debugging prototype and production electronics;
-- supporting PCB manufacturing, configuration, flashing, incoming testing, rework, component substitutions, and engineering changes.
+- defining the embedded system architecture and designing more than 10 revisions of the main controller electronics
+- developing and maintaining the STM32F4 firmware using STM32Cube HAL/LL and FreeRTOS
+- implementing closed-loop motor control, wheel odometry, IMU and battery interfaces, status indication, and low-level system functions
+- integrating the STM32 controller with ROS using rosserial and later micro-ROS
+- integrating a separate Arduino-compatible student-programmable subsystem
+- designing the six-motor expansion controller used in larger mobile platforms
+- bringing up and debugging prototype and production electronics
+- supporting PCB manufacturing, configuration, flashing, incoming testing, rework, component substitutions, and engineering changes
 
 
 ## Embedded architecture

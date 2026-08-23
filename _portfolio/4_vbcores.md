@@ -30,12 +30,12 @@ The main VBCore module is a compact 4-layer System-on-Module based on STM32G474R
 
 Its main functions are:
 
-- STM32G474RE MCU;
-- robot-bus input up to 50 V;
-- onboard 5 V and 3.3 V power rails available to the application board;
-- integrated CAN-FD transceiver;
-- standardized SWD and UART debug interface;
-- castellated solder-down form factor.
+- STM32G474RE MCU
+- robot-bus input up to 50 V
+- onboard 5 V and 3.3 V power rails available to the application board
+- integrated CAN-FD transceiver
+- standardized SWD and UART debug interface
+- castellated solder-down form factor
 
 The 50 V input range was chosen so that the same module could work directly from common robot battery buses, including 10S Li-ion systems.
 
