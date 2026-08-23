@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-# Robotics Electronics & Embedded Systems Engineer
+# About me
 
 I design embedded electronics for robots.
 
@@ -15,4 +15,3 @@ My work covers the complete path from system architecture and PCB design to STM3
 
 ![Robotic platforms](/images/landing.jpg)
 *Some of the robotic platforms I developed electronics for.*
-
