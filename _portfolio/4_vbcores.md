@@ -65,7 +65,7 @@ The same SoM became the embedded core of several substantially different applica
 
 ### Motor control
 
-A common hardware format was developed for BLDC, brushed DC, and stepper motor controllers.
+A common hardware format was developed for [BLDC](https://vbcores.com/products/bldc-driver), [brushed DC](https://vbcores.com/products/dc-driver), and [stepper](https://vbcores.com/products/stepper-driver) motor controllers.
 
 The boards shared the VBCore SoM, connector layout, encoder interfaces, and configuration EEPROM while using different power stages for the motor type.
 
@@ -104,7 +104,7 @@ VBCores was used across several different robotic systems.
 
 ### MORS
 
-The MORS quadruped used VBCore-based actuator controllers together with PowerBoard, Ethernet–FDCAN, and IMU hardware.
+The [MORS](/portfolio/1_mors/) quadruped used VBCore-based actuator controllers together with PowerBoard, Ethernet–FDCAN, and IMU hardware.
 
 This was the most complete use of the platform: the same embedded foundation covered motor control, power, communication, and sensing.
 
@@ -133,8 +133,6 @@ A common platform inevitably introduces constraints.
 On PowerBoard, nearly every SoM pin was eventually used; even a two-bit configuration switch had to be encoded through a resistor network into the remaining ADC input.
 
 VBCores was also unnecessary for some simpler systems. On small educational rovers, the computing power, 50 V architecture, and modular hardware could be excessive compared with a dedicated low-cost controller.
-
-The experience reinforced a useful rule: standardization is valuable when it removes repeated engineering work, not when it becomes a requirement of its own.
 
 
 ## Outcome

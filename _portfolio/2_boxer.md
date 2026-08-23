@@ -19,7 +19,7 @@ A [paper](https://www.researchgate.net/publication/362930025_CPG-Based_Gait_Gene
 
 Mini Cheetah provided a known working reference for the first Boxer actuator.
 
-Boxer adopted the same general actuator class: 8108 BLDC motors and approximately 6:1 reduction. I first reproduced Ben Katz's published motor controller and FOC implementation using STM32F446, DRV8302, and AS5047P, then gradually adapted the electronics and firmware to the components, manufacturing methods, onboard computer, and communication hardware available for Boxer.
+Boxer adopted the same general actuator class: 8108 BLDC motors and 6:1 reduction. I first reproduced Ben Katz's published motor controller and FOC implementation using STM32F446, DRV8302, and AS5047P, then gradually adapted the electronics and firmware to the components, manufacturing methods, onboard computer, and communication hardware available for Boxer.
 
 The mechanical architecture diverged substantially from Mini Cheetah. Locally manufactured drivetrain components and a simpler gearbox arrangement resulted in a bulkier and heavier actuator, while allowing the project to be built with available manufacturing processes.
 
@@ -92,7 +92,7 @@ I installed Ubuntu, built a real-time patched kernel, configured the CAN-FD inte
 
 The resulting data path was:
 
-**Actuator STM32 → CAN-FD → PCIe CAN interface → Linux → LCM**
+**Actuator STM32 → CAN-FD → PCIe CAN-FD interface → Linux → LCM**
 
 
 ## Robot power electronics
@@ -130,7 +130,6 @@ The main lessons were:
 
 - absolute joint position should be available at startup;
 - wiring and serviceability need to be designed together with the mechanics;
-- actuator electronics should be reproducible and easy to replace;
 - the complete robot architecture should be designed for repeatable operation, not merely for a successful prototype.
 
 These lessons became starting requirements for the next quadruped generation, [MORS](/portfolio/1_mors/).

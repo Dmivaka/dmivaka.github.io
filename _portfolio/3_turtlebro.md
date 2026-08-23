@@ -37,7 +37,7 @@ My work included:
 
 The main controller combined the robot's low-level control electronics, power system, student-programmable subsystem, and internal communication infrastructure on a single PCB.
 
-The **STM32F4** was the system controller. It handled two brushed DC motors with encoder feedback, PID velocity control and wheel odometry, communication with the BNO055 IMU, battery voltage/current measurement, external-power detection, undervoltage protection, status indication, and communication with the six-motor expansion board.
+The **STM32F407** was the system controller. It handled two brushed DC motors with encoder feedback, PID velocity control and wheel odometry, communication with the BNO055 IMU, battery voltage/current measurement, external-power detection, undervoltage protection, status indication, and communication with the six-motor expansion board.
 
 A separate **Arduino-compatible subsystem** was implemented directly on the controller PCB and exposed standard headers and student I/O. Students could modify Arduino code independently while the STM32 firmware responsible for motion, power management, and system functions remained unchanged. Early revisions were Mega-compatible; later generations moved to a Due-compatible implementation.
 
@@ -64,8 +64,6 @@ Early controller revisions could switch between battery and external DC power, a
 The main controller went through more than **10 hardware revisions over seven years**. Early versions were 2-layer boards; later generations became 4-layer production PCBs with more than 400 components.
 
 The electronics evolved together with the product: battery charging was added, the educational controller moved from Mega to Due, ROS integration moved from rosserial to micro-ROS, and boards were repeatedly revised in response to user feedback, manufacturing experience, new functionality, component shortages, and supplier changes.
-
-This long product lifetime was as important to the project as the initial design. The same embedded architecture had to remain understandable, manufacturable, repairable, and extensible while both the electronics market and product requirements changed around it.
 
 
 ## Six-motor expansion
@@ -109,7 +107,7 @@ Over the product lifetime, manufacturing support became an ongoing part of the e
 *Early controller PCB used for firmware development with an external STM32 development board.*
 
 ![Early TurtleBro prototype](/images/tb/tb_TB3_comparison.jpg)
-*Early TurtleBro prototype (left) alongside a TurtleBot 3 reference platform (right). The comparison shows the compact form factor targeted during early development.*
+*Early TurtleBro prototype (left) alongside a TurtleBot 3 reference platform (right).*
 
 ![Hand soldering of early production electronics](/images/tb/tb_hand_prod.jpg)
 *Hand soldering controller boards for an early commercial batch.*

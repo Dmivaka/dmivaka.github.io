@@ -6,7 +6,7 @@ collection: portfolio
 
 MORS is a lightweight 12-DoF quadruped developed as a compact, reliable robotics research platform and produced in a ten-unit low-volume batch.
 
-The project followed the earlier Boxer quadruped. Boxer proved the basic actuator and control architecture, but remained a heavy research prototype. MORS was intended to be a much more repeatable machine: compact enough to transport easily, mechanically designed as a complete product, and reliable enough to serve as a stable platform for advanced locomotion research.
+The project followed the earlier [Boxer](/portfolio/2_boxer/) quadruped. Boxer proved the basic actuator and control architecture, but remained a heavy research prototype. MORS was intended to be a much more repeatable machine: compact enough to transport easily, mechanically designed as a complete product, and reliable enough to serve as a stable platform for advanced locomotion research.
 
 My work covered the embedded electronics, actuator firmware, robot communication hardware, and much of the electronics integration. Mechanical design and high-level locomotion control were outside my scope.
 
@@ -15,7 +15,7 @@ The robot also has its own [Instagram](https://www.instagram.com/mors_quadruped/
 
 {% include youtube.html id="X0VH79P7XvY" %}
 
-### 12 DoF · 7.4 kg · 5.5 kg tested payload · 1.2 m/s · 6S Li-ion · 10 robots produced
+**12 DoF · 7.4 kg · 5.5 kg tested payload · 1.2 m/s · 6S Li-ion · 10 robots produced**
 
 
 ## From Boxer to MORS
@@ -24,9 +24,9 @@ A major change from Boxer was the use of commercially available 4310 BLDC motors
 
 Electronics packaging and joint-position sensing were developed together with the mechanical layout so that board size, wiring, mounting, and sensor geometry were considered before parts were manufactured.
 
-MORS also became the first quadruped built around the **VBCores** modular electronics architecture. Instead of repeating the MCU, power supply, and CAN interface on every board, the robot reused the same STM32G4 System-on-Module across actuator, power, sensing, and communication hardware.
+MORS also became the first quadruped built around the [VBCores](/portfolio/4_vbcores/) modular electronics architecture. Instead of repeating the MCU, power supply, and CAN interface on every board, the robot reused the same STM32G4 System-on-Module across actuator, power, sensing, and communication hardware.
 
-Several subsystems that matured during MORS development—including the PowerBoard, Ethernet–FDCAN bridge, and IMU hardware—later became reusable parts of the wider [VBCores](https://vbcores.com/) ecosystem.
+Several subsystems that matured during MORS development—including the PowerBoard, Ethernet–FDCAN bridge, and IMU hardware—later became reusable parts of the wider VBCores [ecosystem](https://vbcores.com/).
 
 
 ## My responsibility
@@ -53,8 +53,8 @@ The robot was powered by a 6S Li-ion battery through the PowerBoard. Four separa
 
 The onboard computer also received IMU and RC-control interfaces over USB.
 
-<a href="/images/mors/MORS_elec_scheme_3.png" target="_blank" style="border: none; outline: none; background: none; box-shadow: none;">
-  <img src="/images/mors/MORS_elec_scheme_3.png" alt="MORS electronic architecture">
+<a href="/images/mors/MORS_elec_scheme.png" target="_blank" style="border: none; outline: none; background: none; box-shadow: none;">
+  <img src="/images/mors/MORS_elec_scheme.png" alt="MORS electronic architecture">
 </a>
 
 *Electronic architecture of MORS. Blocks highlighted in green were designed and implemented by me.*
