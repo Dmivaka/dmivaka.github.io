@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Electronics Engineer — Robotics & Embedded Systems"
   location         : "Moscow"
-  employer         : "Voltbro / Institute of mechanics MSU"
+  employer         : #
   uri              : # URL
   email            : "dv.kapytov@physics.msu.ru" 
 
